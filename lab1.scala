@@ -23,27 +23,31 @@ object Main234 {
       if(z < 0){
         z = z.abs
         numberString = "011" + z.toString
-      } 
+      }
       if (z.toString.length() < 10){
-        numberString = "0" + z 
-        println("numberString= " + numberString)
-        for (j <- 1 to (10 - numberString.length()) + 1){
-        numberString = "1" + z.toString
+        numberString = z.toString
+        for (j <- 1 to (10 - numberString.length() + 1)){
+          numberString = "1" + numberString
         }
+        numberString = "0" + numberString
+        println("new numberString = " + numberString)
       }
       else {
         numberString = z.toString
       }
-      println("a= " + a)
-      println("b= " + b)
-      println("c= " + c)
-      println("rez= " + rez)
-      println("z="+ z)
-  
+      println("a = " + a)
+      println("b = " + b)
+      println("c = " + c)
+      println("rez = " + rez)
+      println("z ="+ z)
+
+      if(numberString.length < 12){
+        numberString = "11" + numberString
+      }
       numberString= numberString.substring(1,numberString.length()-1)
       //println("num= "+ numberString)
       //numberString="01"+z
-      println("numberString= " + numberString)
+      println("numberString = " + numberString)
       println()
 
     }
